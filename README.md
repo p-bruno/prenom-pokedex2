@@ -6,5 +6,5 @@ Bienvenue sur le dépôt de mon application **Pokédex**, un catalogue de Pokém
 
 ## Conception (MCD)
 
-<img href=""/>
+<img src="./public/MCD Pokedex.jpg" height="500px"/>
 
