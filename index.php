@@ -25,4 +25,14 @@ try {
     echo "Connection à la BDD impossible : ", $e->getMessage();
     die();
 }
+
+//Prépare la requête
+$select = $connection->query("SELECT pokemon.pokemon_nom, pokemon.pokemon_img FROM pokemon;");
+
+//Envoie  la requête SQL à la BDD, récupère (fetch) les résultats dans un tableau d'objet
+$pokemons = $select->fetchAll(PDO::FETCH_OBJ);
+
+//Affichage du tableau
+var_dump($pokemons);
+
 ?>
