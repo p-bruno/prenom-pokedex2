@@ -1,9 +1,13 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
 
-// Charge les variables du fichier .env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
+$autoload =  __DIR__ . '/../vendor/autoload.php';
+
+if (file_exists($autoload) && file_exists(__DIR__ . '/../.env')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+    // Charge les variables du fichier .env
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+    $dotenv->load();
+}
 
 try {
     // mysql => indique le moteur de la BDD
