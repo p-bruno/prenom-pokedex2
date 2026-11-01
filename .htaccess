@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# 1. Si on accède à la racine, on va vers pokedex.php
+RewriteRule ^$ api/pages/pokedex.php [L]
+
+# 2. Si on accède à /detail, on va vers detail.php
+RewriteRule ^detail$ api/pages/detail.php [L,QSA]

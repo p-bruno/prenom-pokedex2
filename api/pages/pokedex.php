@@ -8,7 +8,7 @@ $select = $connection->query("SELECT * FROM pokemon;");
 $pokemons = $select->fetchAll(PDO::FETCH_OBJ);
 
 foreach ($pokemons as $pokemon) {
-    echo ("<a href='detail.php?pokemon_id={$pokemon->pokemon_id}'>");
+    echo ("<a href='detail?pokemon_id={$pokemon->pokemon_id}'>");
     echo ("<img width='150px' src='{$pokemon->pokemon_img}'>");
     echo ("<h1>{$pokemon->pokemon_nom}</h1>");
     echo("</a>");
